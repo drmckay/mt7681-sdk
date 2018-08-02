@@ -1,0 +1,358 @@
+=================================================================================
+Package Name      :  IoT_MT7681_PKG_v0.01
+Release Version   :  v0.01
+Loader Name       :  loader_0120.bin
+APK Version       :  v0.8
+Release Date      :  2014-01-20
+Package Changlist :  91442
+Loader Changlist  :  91449
+APK Changlist     :  91173
+
+
+Feature Support and Notes:
+1: Support Boot from Flash
+2: Support smart connect and scan
+3: Support Auth, Assoc with target AP which indicated by the scan result
+   (Only support AuthMode: Open, Open(WEP))
+   (The WPA2_PSK is developmenting)
+4: Support Wifi Data Command Parsing for GPIO_SET, GPIO_GET,  Offline, Uart Tx
+   (The Data Command: PWM_Set is not coexist with UartControl, thus PWM_Set default is turn off)
+   (GPIO_GET will change GPIO to input mode, and reset GPIO to high)
+   (The Data Command: Uart Rx is developmenting)
+5: Support AT Command from UART for Version Request, Reboot, ChannelSwitch
+6: Support Flash Read/Write
+	 (Because Flash sector shall be erased before flash writting,
+	  another simple Flash Write API is developmenting)
+
+
+Known issue:
+a) AT Command: AT#Reboot might fail for some reason
+b) Data Command:  Query Data might fail for some reason
+c) Smart connection might fail with some specific AP router
+
+=================================================================================
+
+=================================================================================
+Package Name      :  IoT_MT7681_PKG_v0.02
+Release Version   :  v0.02
+Loader Name       :  loader_0120.bin
+APK Version       :  v0.9
+Release Date      :  2014-01-28
+Package Changlist :  91894
+Loader Changlist  :  91449
+APK Changlist     :  91885
+
+
+Feature Support and Notes:
+1: Support TCP/IP lite(Server/Client), DHCPC, ARP
+2: Support WPA2-PSK
+3: Support Sta config settings read/write from Flash
+4: Support AT Command from UART configration
+5: Support AT Command TCP/IP (Server)
+   (default turn off above two AT command)
+6: Support Flash Read/Write API
+
+
+Known issue:
+a) AT Command: AT#Reboot might fail for some reason
+b) Data Command:  Query Data might fail for some reason
+c) Smart connection might fail with some specific AP router
+
+=================================================================================
+
+=================================================================================
+Package Name      :  IoT_MT7681_PKG_v0.04
+Release Version   :  v0.04(STA),  v0.01(AP)
+Loader Name       :  loader_0322_94973.bin
+APK Version       :  v0.941
+Release Date      :  2014-03-22
+Package Changlist :  94977(STA), 94574(SoftAP)
+Loader Changlist  :  94973
+APK Changlist     :  94898
+
+Feature Support and Notes:
+1:  [STA]Update Flash mapping
+2:  [STA]Add timeout in 4-way hanshake SM
+3:  [STA]Fix system reboot fail issue
+4:  [STA]support IoT command password
+5:  [STA]Support TCP connect to internet server
+6:  [STA]Support AT command for firmware update with x-modem (only trun on Recovery Mode by default)
+7:  [STA]Support hardware timer PWM
+8:  [STA]Support Uart to wifi (Query->Response mechanism)
+9:  [STA]Support load EEPROM setting 
+10: [STA]Support TCP rexmit  (disable it by default)
+11: [STA]Improve Data Parser, to support sequence number control
+12. [STA]Add AT command for Efuse Read/Write  (turn on only on calibration FW)
+13. [STA]Add AT Command for Flash Read/Write
+14. [STA]Flash XIP support (disable it by default)
+15. [STA]Add customer hook mechanism
+16. [STA]Add a flag(gCaliFrEfuse) to control the load postion of calibration settings
+17. [STA]Default Turn off Class1,2,3 check,  WEP , and most of AT Command
+18. [STA]implement Common/user/sta/ap configration customzaion mechanism
+19. [STA]implement new Boot flow and FW upgrade flow
+20. [STA]fix system halt issue caused by illegal memory access
+
+21. [AP] Support Open Mode connectioin
+22. [AP] Support Beacon send out
+23. [AP] Support SSID, Password change by AT Command
+
+Known issue:
+a) [MT7681][IoT]IoT will always connect the last AP afterDHCP failed
+b) [MT7681][IoT]IoT Can't connect AP  after AP modify SSID and forget AP then reconnect
+c) [MT7681][IoT]IoT will always Assoc with Ap which have changed mode or password
+d) 4-way handshark fail with softAP (HTC phone)
+
+=================================================================================
+
+
+=================================================================================
+Package Name      :  IoT_MT7681_PKG_v1.00
+Release Version   :  v1.00(STA),  v0.01(AP)
+Loader Name       :  loader_0322_94973.bin
+APK Version       :  v0.941
+Release Date      :  2014-03-28
+Package Changlist :  95543(STA), 94574(SoftAP)
+Loader Changlist  :  94973
+APK Changlist     :  94898
+
+Feature Support and Notes:
+1:  [STA]Enable XIP feature
+2:  Fix [MT7681][IoT]IoT will always connect the last AP afterDHCP failed
+3:  Fix [MT7681][IoT]IoT Can't connect AP  after AP modify SSID and forget AP then reconnect
+4:  Fix [MT7681][IoT]IoT will always Assoc with Ap which have changed mode or password
+5:  Fix 4-way handshark fail with softAP (HTC phone)
+6:  Open symbol IoT_Xmodem_Update_FW()
+7:  Release iot_uart_rb.c and bmd.h
+8:  Enable AT Command [FW ugprade, Reboot,GetVer, ChannelSwitch, Uartset] for Calibration
+
+Known issue:
+
+=================================================================================
+
+=================================================================================
+Package Name      :  IoT_MT7681_PKG_v1.10
+Release Version   :  v1.10(STA),  v1.10(AP)
+Loader Name       :  loader_0322_94973.bin
+APK Version       :  v0.941
+Release Date      :  2014-04-14
+Package Changlist :  96784(STA), 96784(SoftAP)
+Loader Changlist  :  94973
+APK Changlist     :  94898
+
+Feature Support and Notes:
+1:  [STA]Enable XIP and overlay feature
+2:  Auto generate MT7681_all.bin for FW upgrade by Flash Writer after SourceCode compiling
+3:  Provide uart-to-wifi API
+4:  Provide new software pwm interface 
+5:  support DNS  (default turn it off)
+6:  UDP sample code
+7:  UDP APP architecture refine
+8:  Integrate SoftAp mode and Station mode source code
+9:  Seprate the Smart connection module for customazaiton.
+    (user can select MTK/user Smart Connection by themshelf  with macro:CFG_SUPPORT_MTK_SMNT)
+10: Release UIP source Code
+11: FW upgrade size will be ovelay while FW.bin is more than 65535 bytes, because spi_flash_update_fw() 's  parameter "offset" is uint16.
+
+Known issue:
+
+=================================================================================
+
+=================================================================================
+Package Name      :  IoT_MT7681_PKG_v1.20
+Release Version   :  v1.20(STA),  v1.20(AP)
+Loader Name       :  loader_0322_94973.bin
+APK Version       :  v0.96
+Release Date      :  2014-05-17
+Package Changlist :  99300(STA), 99300(SoftAP)
+Loader Changlist  :  94973
+APK Changlist     :  99296
+
+Feature Support and Notes:
+1: Add Tx packet length paramter (-l) for ATE command
+2: Add Rx cnt Duration Paramter (-t) for ATE command
+3: Add bandwidth select Paramter "-b" for ATE command
+4: Fix ATE Tx Result is not correct as the TxPwr Per rate set wrong data
+5: Fix RxCalibration  AvgRSSI0 is not exactly.
+6. Summary Boardcast+multicast+nottomeUnicast frame in Rx calibration
+7: Merge Calibration mode and Recovery Mode into Recovery.bin
+
+8: Delect AT cmd refer to TCP
+9: Rename uart rx to air compile option.
+10:Do flash_merge.sh 3  as compile Recvoery Mode FW
+11:Enable soft PWM by default
+12:Query GPIO in APK can get GPIO0~4 status, no matter some of them are in PWM modee
+13:Add Recovery Mode duration paratimer for customerization
+14:Enable Uart symbol for customer usage
+
+15:Support 802.11n  Bandwidth 40M  for Rx Path (Default use BW_40 in Smnt state, and BW_20 in other states).
+16:release sample code and control Macro to  calcurate PMK by 7681 software, it will spend 6sec
+17:release ws_got_ip(),  ws_got_ip_fail() to customer.
+18:Release AES Decrypt/Encrypt API to customer.
+19:Enable Reboot AT cmd in flag_sta.mk
+20:Enable Power Calibratioin to improve Rx sensitivity
+21:Separate main(), wifi_task, RxHandle  to *_pub.c, and release more .h file to customer.
+22:Add paramter PRINT_FLAG  to determin if enable Printf_High()/DBGPRINT_HIGH() 
+23:add input paramter bSpecificAP, to inidicate if use Specific SSID for scanning
+
+24:Flash Write API improvement
+25:Add 3 APIs to enable GPIO interrput.
+26:Add IoT_gpio_read( ) to Read gpio status:  (*pPolarity 0=output mode, 1=input mode),  (*pVal  0=low,  1=High) 
+27:use IoT_gpio_read() to instead of IoT_gpio_input() in uart2wifi handle
+
+28:Fix FW Upgrade fail from uart, because FW upgrade size is not correct
+29:Fix some AP may feedback DHCP OFFER/ACK in a long time--Set BOOTP flag as 0x0
+30:Fix smnt/scan process abnormal by stop smnt, scan timer when do wifi_state_chg()
+31:Fix uiP input fail while UDP client connect->disconnect-->connect (remote port change)
+32:Fix Not send Auth frame if disable CFG_SUPPORT_MTK_SMNT.
+33:Fix GPIO0,1 swap issue
+34:Fix Rx/Tx Dequeue fail--Move wifi_rx_proc outside from ATEPeriodicExec()
+35:Fix AP mode can not Tx/Rx
+
+Known issue:
+
+=================================================================================
+
+=================================================================================
+Package Name      :  IoT_MT7681_PKG_v1.30
+Release Version   :  v1.30(STA),  v1.30(AP)
+Loader Name       :  loader_0322_94973.bin
+APK Version       :  v0.96
+Release Date      :  2014-06-16
+Package Changlist :  101521(STA), 101521(SoftAP)
+Loader Changlist  :  94973
+APK Changlist     :  99296
+
+Feature Support and Notes:
+1: Enable Uart Interrupt Feature
+2: set Rx filter to make Auth-->4way more stable
+3: Add SLT test feature (customer not use)
+4: Disable Uart Rx INT during Xmodem start
+5: set UartRx default as mode1 (Query Mode) for APK demo
+6: Add sleep mode (Temperary turn it off as we found some issues)
+7: Support ATE Calibraiton with "iwpriv ra0" cmd format
+8: make AT#ATECAL,  iwpriv ra0 coexistence
+9: support Hex/Decmmal parameter input for AT#EFSUE, AT#FLASH
+10:Disable ACK retry in ATE calibration FW
+11:Fix data can not be handle by set pIoTMlme->DataEnable=1 if CFG_SUPPORT_MTK_SMN=0 
+12:Add 2 API to control the Rx filter.
+13:release xmodem and SPI flash source code 
+14:Release MD5 API.
+15:move GPIO0~4 output set module to main() for customazation
+16:Enable WEP by default
+17:Support WPA PSK(AES/TKIP). WPA2 PSK(AES/TKIP),  WPA/WAP2 Mixed Mode
+18:Limite Rx CPU Page Num to fix Tx fail with heavy Rx traffic
+19:Delete excess Enqueue operation in Scan/Auth/Assoc process to fix freeQueue empty
+20:Fix ping timeout issue
+21:improve UDP server coding mistake
+22:Declare more function as XIP func for code shrink
+
+Known issue: 
+1:  Rx packet maybe lost if turn on the sleep mode
+=================================================================================
+
+=================================================================================
+Package Name      :  IoT_MT7681_PKG_v1.40
+Release Version   :  v1.40(STA),  v1.40(AP)
+Loader Name       :  loader_0322_94973.bin
+APK Version       :  v0.96
+Release Date      :  2014-07-08
+Package Changlist :  103594(STA),  103594(SoftAP)
+Loader Changlist  :  94973
+APK Changlist     :  99296
+
+Feature Support and Notes:
+1: Enable TCP Tx ReTransmit, and Http Client by default.
+2: Fixed UART TX FIFO depth error which lead to data curruption.
+3: Revision some code of UART2WIFI.
+4: Fixed UART bug:continues 1 bytes data will missing
+5: Disable UART UART_IER_ELSI for UART HW bug.
+
+6: Add UART TX POLL mode when UART INTERRUPT SUPPORTED.
+7: Add PS mode
+8: Make PWM level can be customized
+9: Support http client
+10:Enable HW timer1 interrupt function.
+11:Add Tx retry limit.
+12:release mt76xx_dev_send()
+13:If there are valid content, Aways load sta cfg from Flash but not do smnt,  
+14:Do nothing in STARxHandle function in ATE mode to shrink recovery FW codesize
+
+15:Add AT#Smnt command to enter smnt state
+16:Add AT cmd: AT#PS -lx -ty    to set Power saving level   (default not use)
+17:Update AT cmd:  AT#Channel -b0 -c1    to set Bandwidth and channel
+18:XIP improve to move more functions to Flash XIP region.
+
+19:Drop multicast packet after PS check when 7681 is in CONNECTED state.
+20:Clean all key table when 7681 in INIT state
+21:Fix smnt halt if send more TLV data than 96Bytes.
+22:Fixed pravacy bit error switch from OPEN WEP to OPEN NON.
+23:Fix:can not change to other channel while do Rx calibration.
+24:Makefile improve to fix buidling error with differente path.
+25:[WCNCR00011175] [MT7681][IoT]The light is wrong while query and set many times
+26:[WCNCR00011223] [MT7681][IoT]Can't get IP address while connect NERGEAR WNR 3500
+27:[WCNCR00011225] [MT7681][IoT]IoT can't receive connect command-- fix IoT aways keep in smnt state
+28:[WCNCR00011250] [MT7681][IoT]IoT can't connect with AP while its SSID is 32byte, 
+                   (APK Issue:it sent SSIDLEN>32. MT7681 will return smnt if ssid/password Len is invalid.)
+29:Use GetMsTimer() to calculate the duration for [WTask]LOG print and ATE calibration count.
+
+Known issue: 
+1: 
+=================================================================================
+
+=================================================================================
+Package Name      :  IoT_MT7681_PKG_v1.41
+Release Version   :  v1.41(STA),  v1.41(AP)
+Loader Name       :  loader_0322_94973.bin
+APK Version       :  v0.96
+Release Date      :  2014-07-24
+Package Changlist :  105022(STA),  105022(SoftAP)
+Loader Changlist  :  94973
+APK Changlist     :  99296
+
+Feature Support and Notes:
+1: Http client callback improve
+2: Move multicasst packet drop to Rx ISR filter
+3: Power Level 2 improve
+4: free 3KB more ram size by XIP mechanism
+5: delete structure "IOT_SMMNT_INFO", and instead by "pIoTStaCfg"
+6: Improve process if not use MTK smnt.
+7: Enable XIP, OverLay for AP mode.
+8: Load AP config from flash
+
+9: Add host name option for DHCP client.
+10:Add API to pack and send UDP packet directly.
+11:Add AES ECB encrypt/Decrypt Sample code
+12:Release AES test file,  AP config file,  UDP send directly APi file
+
+Known issue: 
+1: 
+=================================================================================
+
+=================================================================================
+Package Name      :  IoT_MT7681_PKG_v1.50
+Release Version   :  v1.50(STA),  v1.50(AP)
+Loader Name       :  loader_0322_94973.bin
+APK Version       :  v0.96
+Release Date      :  2014-08-07
+Package Changlist :  106256(STA),  106256(SoftAP)
+Loader Changlist  :  94973
+APK Changlist     :  99296
+
+Feature Support and Notes:
+1: Add AES CBC encrypt/decrypt Sample code
+2: Make beacon lost timeout handler canbe customized
+3: Release SPI driver for flash erase, read, write
+4: Fix system halt while call spi_read() without WAIT_OP_DONE_PUB in the XIP function;
+5: Random set http_clientPort
+6: Fix AES Decrypt/Encrypt output incorrect, after do malloc.
+7: Support to connect to 802.11n Only AP
+8: Fix cannot sniffer packet in CH12,13 in Smnt state
+9: Add AsicSetChannel() to set BW,CH, ExtCHDirect
+10:Temperary turn off Power Saving ,because 1:DHCP fail   2:Ping timeout in '11n only' AP.
+11:Judge SSID length while config SSID by AT cmd, and judge Rx buffer length for netif_rx()
+
+Known issue: 
+1: PowerSaving Enable:  7681 maybe get IP fail from 11n Only AP
+2: PowerSaving Enable:  7681 maybe PingTimeout while connected to 11n Only AP
+3: PowerSaving Enable:  7681 GPIO3 blinking
+=================================================================================
