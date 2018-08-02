@@ -1,0 +1,33 @@
+=================================================================================
+Package Name      :  IoT_MT7681_PKG_V1.7.0
+Release Version   :  v1.7.0(STA),  v1.7.0(AP)
+Loader Name       :  MT7681_loader.bin,  MT7681_loader_xip164.bin
+APK Version       :  v0.98
+Release Date      :  2014-12-30
+Package Changlist :  116768
+Loader Changlist  :  108284
+APK Changlist     :  116423
+
+Feature Support and Notes:
+1: Initial version
+
+Known issues      : None
+=================================================================================
+
+=================================================================================
+Package Name      :  IoT_MT7681_PKG_V1.7.1
+Release Version   :  v1.7.1(STA),  v1.7.1(AP)
+Loader Name       :  MT7681_loader.bin,  MT7681_loader_xip164.bin
+APK Version       :  v0.98
+Release Date      :  2015-1-9
+Package Changlist :  117433
+Loader Changlist  :  108284
+APK Changlist     :  116423
+
+Feature Support and Notes:
+1: Add ATECAL -P parameter for BBP power adjustment (only available in recovery 
+   mode)
+2: Fixed a byte aligned issue (when image compiled with Windows Andes toolchain) 
+
+Known issues      : None 
+=================================================================================

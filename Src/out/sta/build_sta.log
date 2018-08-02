@@ -1,0 +1,257 @@
+Compiling cust/ap_pub.c ...
+Compiling cust/crypt_crc.c ...
+Compiling cust/iot_aes_pub.c ...
+cust/iot_aes_pub.c: In function 'aes_sample':
+cust/iot_aes_pub.c:85: warning: unused variable 'PlainLen'
+Compiling cust/iot_at_cmd.c ...
+Compiling cust/iot_at_cmd_tcpip.c ...
+Compiling cust/iot_at_cmd_utility.c ...
+Compiling cust/iot_custom.c ...
+Compiling cust/iot_custom_uart2wifi.c ...
+Compiling cust/iot_parse.c ...
+Compiling cust/iot_parse_conn_mgmt.c ...
+Compiling cust/iot_uart_rb.c ...
+cust/iot_uart_rb.c: In function 'uart_put_bytes':
+cust/iot_uart_rb.c:91: warning: initialization discards qualifiers from pointer target type
+Compiling cust/iot_uplink.c ...
+Compiling cust/iot_xmodem.c ...
+cust/iot_xmodem.c: In function 'crc16_ccitt':
+cust/iot_xmodem.c:53: warning: implicit declaration of function 'crc_cal_by_bit'
+Compiling cust/main_pub.c ...
+cust/main_pub.c: In function 'main':
+cust/main_pub.c:96: warning: implicit declaration of function 'sysTASK_RegTask'
+Compiling cust/misc_pub.c ...
+Compiling cust/mt7681_ChSw_pub.c ...
+Compiling cust/printf.c ...
+Compiling cust/rtmp_data_pub.c ...
+cust/rtmp_data_pub.c: In function 'STAHandleRxDataFrame':
+cust/rtmp_data_pub.c:286: warning: implicit declaration of function 'SMTCNRXFrameHandle'
+cust/rtmp_data_pub.c:322: warning: implicit declaration of function 'STACheckRxDataForPS'
+cust/rtmp_data_pub.c: In function 'STAHandleRxMgmtFrame':
+cust/rtmp_data_pub.c:362: warning: implicit declaration of function 'ScanProcessMgmt'
+cust/rtmp_data_pub.c:366: warning: implicit declaration of function 'MlmeAuthProcess'
+cust/rtmp_data_pub.c:370: warning: implicit declaration of function 'MlmeAssocProcess'
+cust/rtmp_data_pub.c:383: warning: implicit declaration of function 'PeerDisassocAction'
+cust/rtmp_data_pub.c:405: warning: implicit declaration of function 'STACheckRxBeaconForPS'
+cust/rtmp_data_pub.c: In function 'sta_legacy_frame_tx':
+cust/rtmp_data_pub.c:1026: warning: implicit declaration of function 'WriteSingleTxResource'
+cust/rtmp_data_pub.c: In function 'PeerBeaconCHInfoParse':
+cust/rtmp_data_pub.c:1479: warning: implicit declaration of function 'RTMPZeroMemory'
+cust/rtmp_data_pub.c:1484: warning: implicit declaration of function 'PeerBeaconAndProbeRspSanity'
+Compiling cust/spi-flash_pub.c ...
+Compiling cust/stdlib.c ...
+Compiling cust/tcpip/clock-arch.c ...
+Compiling cust/tcpip/cloudclient.c ...
+cust/tcpip/cloudclient.c: In function 'string_to_hex':
+cust/tcpip/cloudclient.c:81: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness
+src/include/string.h:20: note: expected 'char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c:82: warning: pointer targets in passing argument 1 of 'simple_strtoul' differ in signedness
+src/include/api/iot_api.h:1031: note: expected 'const char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c: In function 'hex_to_string':
+cust/tcpip/cloudclient.c:98: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+src/include/stdio.h:38: note: expected 'char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c: In function 'cloud_command_parse':
+cust/tcpip/cloudclient.c:162: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness
+src/include/string.h:20: note: expected 'char *' but argument is of type 'u8_t *'
+cust/tcpip/cloudclient.c:174: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness
+src/include/string.h:20: note: expected 'char *' but argument is of type 'u8_t *'
+cust/tcpip/cloudclient.c:190: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness
+src/include/string.h:20: note: expected 'char *' but argument is of type 'u8_t *'
+cust/tcpip/cloudclient.c:202: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness
+src/include/string.h:20: note: expected 'char *' but argument is of type 'u8_t *'
+cust/tcpip/cloudclient.c: In function 'cloud_client_resp_apk':
+cust/tcpip/cloudclient.c:244: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness
+src/include/string.h:20: note: expected 'char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c:246: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness
+src/include/string.h:20: note: expected 'char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c:248: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness
+src/include/string.h:20: note: expected 'char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c:251: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+src/include/string.h:25: note: expected 'const char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c:263: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+src/include/stdio.h:38: note: expected 'char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c:267: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+src/include/string.h:25: note: expected 'const char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c: In function 'cloud_tcp_connect':
+cust/tcpip/cloudclient.c:277: warning: implicit declaration of function 'uiplib_ipaddrconv'
+cust/tcpip/cloudclient.c:278: warning: implicit declaration of function 'resolv_lookup'
+cust/tcpip/cloudclient.c: In function 'cloud_http_get':
+cust/tcpip/cloudclient.c:322: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+src/include/stdio.h:38: note: expected 'char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c:325: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+src/include/stdio.h:38: note: expected 'char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c:327: warning: pointer targets in passing argument 3 of 'webclient_get' differ in signedness
+src/tcpip/apps/iot_tcp_app/webclient.h:176: note: expected 'char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c:317: warning: unused variable 'inDataLen'
+cust/tcpip/cloudclient.c: In function 'cloud_connect_process':
+cust/tcpip/cloudclient.c:334: warning: pointer targets in passing argument 1 of 'cloud_http_get' differ in signedness
+cust/tcpip/cloudclient.c:314: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c: In function 'cloud_activation_process':
+cust/tcpip/cloudclient.c:369: warning: pointer targets in passing argument 1 of 'cloud_command_parse' differ in signedness
+cust/tcpip/cloudclient.c:125: note: expected 'char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c:375: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness
+src/include/stdio.h:38: note: expected 'char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c:376: warning: pointer targets in passing argument 1 of 'cloud_http_get' differ in signedness
+cust/tcpip/cloudclient.c:314: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c: In function 'cloud_para_check_connect':
+cust/tcpip/cloudclient.c:386: warning: unused variable 'dotCount'
+cust/tcpip/cloudclient.c:386: warning: unused variable 'connectFlag'
+cust/tcpip/cloudclient.c:385: warning: unused variable 'cloudConnectServerPort'
+cust/tcpip/cloudclient.c:384: warning: unused variable 'cloudConnectServerIP'
+cust/tcpip/cloudclient.c: In function 'cloud_fota_update':
+cust/tcpip/cloudclient.c:436: warning: pointer targets in passing argument 3 of 'cloud_fota_decrypt' differ in signedness
+cust/tcpip/cloudclient.c:121: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:438: warning: pointer targets in passing argument 2 of 'RT_MD5_Append' differ in signedness
+src/include/crypt_md5.h:47: note: expected 'const uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:442: warning: pointer targets in passing argument 3 of 'spi_flash_update_fw' differ in signedness
+src/include/api/spi-flash.h:16: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:446: warning: pointer targets in passing argument 3 of 'spi_flash_update_fw' differ in signedness
+src/include/api/spi-flash.h:16: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:453: warning: pointer targets in passing argument 1 of 'cloud_fota_decrypt' differ in signedness
+cust/tcpip/cloudclient.c:121: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:453: warning: pointer targets in passing argument 3 of 'cloud_fota_decrypt' differ in signedness
+cust/tcpip/cloudclient.c:121: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:455: warning: pointer targets in passing argument 2 of 'RT_MD5_Append' differ in signedness
+src/include/crypt_md5.h:47: note: expected 'const uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:459: warning: pointer targets in passing argument 3 of 'spi_flash_update_fw' differ in signedness
+src/include/api/spi-flash.h:16: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:475: warning: pointer targets in passing argument 3 of 'cloud_fota_decrypt' differ in signedness
+cust/tcpip/cloudclient.c:121: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:477: warning: pointer targets in passing argument 2 of 'RT_MD5_Append' differ in signedness
+src/include/crypt_md5.h:47: note: expected 'const uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:481: warning: pointer targets in passing argument 3 of 'spi_flash_update_fw' differ in signedness
+src/include/api/spi-flash.h:16: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:485: warning: pointer targets in passing argument 3 of 'spi_flash_update_fw' differ in signedness
+src/include/api/spi-flash.h:16: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:500: warning: pointer targets in passing argument 3 of 'cloud_fota_decrypt' differ in signedness
+cust/tcpip/cloudclient.c:121: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:502: warning: pointer targets in passing argument 2 of 'RT_MD5_Append' differ in signedness
+src/include/crypt_md5.h:47: note: expected 'const uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:505: warning: pointer targets in passing argument 3 of 'spi_flash_update_fw' differ in signedness
+src/include/api/spi-flash.h:16: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:520: warning: pointer targets in assignment differ in signedness
+cust/tcpip/cloudclient.c:427: warning: unused variable 'stringLen'
+cust/tcpip/cloudclient.c: In function 'cloud_http_callback':
+cust/tcpip/cloudclient.c:560: warning: pointer targets in passing argument 1 of 'string_to_hex' differ in signedness
+cust/tcpip/cloudclient.c:73: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:576: warning: pointer targets in assignment differ in signedness
+cust/tcpip/cloudclient.c:577: warning: pointer targets in assignment differ in signedness
+cust/tcpip/cloudclient.c:597: warning: pointer targets in passing argument 1 of 'simple_strtoul' differ in signedness
+src/include/api/iot_api.h:1031: note: expected 'const char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c:605: warning: pointer targets in passing argument 1 of 'cloud_tcp_connect' differ in signedness
+cust/tcpip/cloudclient.c:271: note: expected 'char *' but argument is of type 'u8_t *'
+cust/tcpip/cloudclient.c: In function 'cloud_client_send_keepalive':
+cust/tcpip/cloudclient.c:665: warning: pointer targets in passing argument 1 of 'cloud_client_server_encrypt' differ in signedness
+cust/tcpip/cloudclient.c:113: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c: In function 'cloud_client_gpio_autoupdate':
+cust/tcpip/cloudclient.c:688: warning: pointer targets in passing argument 1 of 'cloud_client_server_encrypt' differ in signedness
+cust/tcpip/cloudclient.c:113: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c: In function 'cloud_client_uart_autoupdate':
+cust/tcpip/cloudclient.c:718: warning: pointer targets in passing argument 1 of 'cloud_client_server_encrypt' differ in signedness
+cust/tcpip/cloudclient.c:113: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c: In function 'cloud_client_fota_autoupdate':
+cust/tcpip/cloudclient.c:757: warning: pointer targets in passing argument 1 of 'cloud_client_server_encrypt' differ in signedness
+cust/tcpip/cloudclient.c:113: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c: In function 'cloud_client_resp_state':
+cust/tcpip/cloudclient.c:777: warning: pointer targets in passing argument 1 of 'cloud_client_server_encrypt' differ in signedness
+cust/tcpip/cloudclient.c:113: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c: In function 'cloud_client_function_packet':
+cust/tcpip/cloudclient.c:807: warning: pointer targets in passing argument 5 of 'cloud_client_resp_state' differ in signedness
+cust/tcpip/cloudclient.c:763: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:829: warning: pointer targets in passing argument 5 of 'cloud_client_resp_state' differ in signedness
+cust/tcpip/cloudclient.c:763: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:851: warning: pointer targets in passing argument 5 of 'cloud_client_resp_state' differ in signedness
+cust/tcpip/cloudclient.c:763: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:855: warning: pointer targets in passing argument 5 of 'cloud_client_resp_state' differ in signedness
+cust/tcpip/cloudclient.c:763: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:877: warning: passing argument 5 of 'cloud_client_resp_state' from incompatible pointer type
+cust/tcpip/cloudclient.c:763: note: expected 'uint8 *' but argument is of type 'struct PWM_Descriptor *'
+cust/tcpip/cloudclient.c:883: warning: pointer targets in passing argument 1 of 'dump' differ in signedness
+src/include/api/iot_api.h:787: note: expected 'puchar' but argument is of type 'int8 *'
+cust/tcpip/cloudclient.c:886: warning: pointer targets in passing argument 5 of 'cloud_client_resp_state' differ in signedness
+cust/tcpip/cloudclient.c:763: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:890: warning: pointer targets in passing argument 5 of 'cloud_client_resp_state' differ in signedness
+cust/tcpip/cloudclient.c:763: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:908: warning: pointer targets in passing argument 5 of 'cloud_client_resp_state' differ in signedness
+cust/tcpip/cloudclient.c:763: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:914: warning: pointer targets in passing argument 5 of 'cloud_client_resp_state' differ in signedness
+cust/tcpip/cloudclient.c:763: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:922: warning: pointer targets in passing argument 5 of 'cloud_client_resp_state' differ in signedness
+cust/tcpip/cloudclient.c:763: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:931: warning: pointer targets in passing argument 1 of 'webclient_get' differ in signedness
+src/tcpip/apps/iot_tcp_app/webclient.h:176: note: expected 'char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c:931: warning: pointer targets in passing argument 3 of 'webclient_get' differ in signedness
+src/tcpip/apps/iot_tcp_app/webclient.h:176: note: expected 'char *' but argument is of type 'uint8 *'
+cust/tcpip/cloudclient.c:788: warning: unused variable 'type'
+cust/tcpip/cloudclient.c: In function 'cloud_client_manage_packet':
+cust/tcpip/cloudclient.c:968: warning: pointer targets in passing argument 5 of 'cloud_client_resp_state' differ in signedness
+cust/tcpip/cloudclient.c:763: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c: In function 'cloud_client_data_handler':
+cust/tcpip/cloudclient.c:983: warning: pointer targets in passing argument 1 of 'cloud_client_server_decrypt' differ in signedness
+cust/tcpip/cloudclient.c:117: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:983: warning: pointer targets in passing argument 3 of 'cloud_client_server_decrypt' differ in signedness
+cust/tcpip/cloudclient.c:117: note: expected 'uint8 *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:994: warning: passing argument 1 of 'cloud_client_manage_packet' from incompatible pointer type
+cust/tcpip/cloudclient.c:941: note: expected 'struct DataHeader *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:1013: warning: passing argument 1 of 'cloud_client_function_packet' from incompatible pointer type
+cust/tcpip/cloudclient.c:783: note: expected 'struct DataHeader *' but argument is of type 'char *'
+cust/tcpip/cloudclient.c:1016: warning: control reaches end of non-void function
+cust/tcpip/cloudclient.c: In function 'cloud_http_callback':
+cust/tcpip/cloudclient.c:614: warning: control reaches end of non-void function
+cust/tcpip/cloudclient.c: In function 'cloud_connect_process':
+cust/tcpip/cloudclient.c:335: warning: control reaches end of non-void function
+cust/tcpip/cloudclient.c: In function 'cloud_http_get':
+cust/tcpip/cloudclient.c:328: warning: control reaches end of non-void function
+cust/tcpip/cloudclient.c: In function 'cloud_set_activation_para':
+cust/tcpip/cloudclient.c:312: warning: control reaches end of non-void function
+Compiling cust/tcpip/dhcpc.c ...
+Compiling cust/tcpip/dhcpd.c ...
+Compiling cust/tcpip/iot_tcp_app.c ...
+cust/tcpip/iot_tcp_app.c: In function 'iot_tcp_app_init':
+cust/tcpip/iot_tcp_app.c:50: warning: implicit declaration of function 'cloud_para_check_connect'
+cust/tcpip/iot_tcp_app.c: In function 'iot_tcp_appcall':
+cust/tcpip/iot_tcp_app.c:93: warning: implicit declaration of function 'cloud_activation_process'
+cust/tcpip/iot_tcp_app.c:107: warning: implicit declaration of function 'cloudClient_tcpAppcall'
+Compiling cust/tcpip/iot_tcpip_interface.c ...
+Compiling cust/tcpip/iot_udp_app.c ...
+Compiling cust/tcpip/memb.c ...
+Compiling cust/tcpip/mt76xx_dev.c ...
+Compiling cust/tcpip/resolv.c ...
+cust/tcpip/resolv.c: In function 'resolv_conf':
+cust/tcpip/resolv.c:425: warning: passing argument 1 of 'uip_udp_new' from incompatible pointer type
+src/tcpip/uip/uip.h:839: note: expected 'u16_t (*)[2]' but argument is of type 'u16_t *'
+Compiling cust/tcpip/sample_resolv_usage.c ...
+cust/tcpip/sample_resolv_usage.c: In function 'resolv_usage_init':
+cust/tcpip/sample_resolv_usage.c:36: warning: passing argument 1 of 'uip_udp_new' from incompatible pointer type
+src/tcpip/uip/uip.h:839: note: expected 'u16_t (*)[2]' but argument is of type 'u16_t *'
+cust/tcpip/sample_resolv_usage.c:36: warning: assignment from incompatible pointer type
+Compiling cust/tcpip/sample_udp_client.c ...
+Compiling cust/tcpip/sample_udp_server.c ...
+cust/tcpip/sample_udp_server.c: In function 'handle_udp_srv_app1':
+cust/tcpip/sample_udp_server.c:44: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness
+src/include/string.h:25: note: expected 'const char *' but argument is of type 'uint8 *'
+Compiling cust/tcpip/tcpip_main.c ...
+cust/tcpip/tcpip_main.c: In function 'tcpip_periodic_timer':
+cust/tcpip/tcpip_main.c:202: warning: implicit declaration of function 'cloud_tcp_conn_check'
+Compiling cust/tcpip/uip-fw.c ...
+Compiling cust/tcpip/uip-neighbor.c ...
+Compiling cust/tcpip/uip-split.c ...
+Compiling cust/tcpip/uip.c ...
+Compiling cust/tcpip/uip_arp.c ...
+Compiling cust/tcpip/uip_timer.c ...
+Compiling cust/tcpip/uiplib.c ...
+Compiling cust/tcpip/webclient-strings.c ...
+Compiling cust/tcpip/webclient.c ...
+cust/tcpip/webclient.c: In function 'webclient_datahandler':
+cust/tcpip/webclient.c:405: warning: implicit declaration of function 'cloud_http_callback'
+Compiling cust/wifi_task_pub.c ...
+cust/wifi_task_pub.c: In function 'wifiTASK_LowPrioTask':
+cust/wifi_task_pub.c:199: warning: implicit declaration of function 'sysTASK_DeassertSignal'
+cust/wifi_task_pub.c:201: warning: implicit declaration of function 'handle_fce_int'
+cust/wifi_task_pub.c:272: warning: implicit declaration of function 'sysTASK_AssertSignal'
+cust/wifi_task_pub.c:276: warning: implicit declaration of function 'iot_sta_pwr_sav'
+Linking out/sta/MT7681_sta.elf ...
+Making out/sta/MT7681_sta_old.bin ...
+Making out/sta/MT7681_sta_ram.bin ...
+Making out/sta/MT7681_sta_xip.bin ...
+Making out/sta/MT7681_sta_overlay.bin ...
